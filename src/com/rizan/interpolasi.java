@@ -3,12 +3,16 @@ package com.rizan;
 import java.util.Arrays;
 
 public class interpolasi {
-    public static final double[] interpLinear(double[] x, double[] y, double[] xi) throws IllegalArgumentException {
+    public static final double[] interpLinear(double[] x, double[] y, double[] xi){
         if (x.length != y.length) {
-            throw new IllegalArgumentException("X and Y must be the same length");
+            System.out.println("X dan Y harus mempunyai panjang yang sama");
+            System.exit(0);
+//            throw new IllegalArgumentException("X and Y must be the same length");
         }
         if (x.length == 1) {
-            throw new IllegalArgumentException("X must contain more than one value");
+            System.out.println("X harus memiliki nilai lebih dari satu");
+            System.exit(0);
+//            throw new IllegalArgumentException("X must contain more than one value");
         }
         double[] dx = new double[x.length - 1];
         double[] dy = new double[x.length - 1];
